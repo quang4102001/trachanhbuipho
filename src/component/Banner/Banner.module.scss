@@ -1,0 +1,52 @@
+.banner {
+}
+
+.banner__item{
+    position: relative;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+.banner__item:hover > .banner__item__line,
+.banner__item:hover > .banner__item__layer {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.banner__item__img {
+  width: 100%;
+}
+
+.banner__item__line {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  left: 16px;
+  bottom: 10px;
+  border: 1px solid #fafafa;
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.2s linear;
+}
+
+.banner__item__layer {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  right: 6px;
+  bottom: 0;
+  transform: scale(0);
+  background-color: var(--shadow-color);
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.2s linear;
+}

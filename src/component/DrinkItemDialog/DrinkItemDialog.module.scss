@@ -1,0 +1,35 @@
+.form-group {
+  .form-control:-webkit-autofill,
+  .form-control:-webkit-autofill:hover,
+  .form-control:-webkit-autofill:focus {
+    font-size: 1.8rem;
+    -webkit-box-shadow: 0 0 0 30px rgba(72, 126, 70, 0.2) inset; /* Tạo đường viền trống */
+    transition: background-color 5000s ease-in-out 0s; /* Tạo chuyển động cho màu nền */
+    border: 1px solid rgb(234, 254, 232);
+  }
+
+  .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--primary-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 253, 21, 0.25);
+  }
+
+  .form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 40px;
+    font-size: 1.8rem;
+  }
+}
+
+.drink__info__name {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.drink__info__price {
+  font-size: 2.4rem;
+  color: var(--active-color);
+}

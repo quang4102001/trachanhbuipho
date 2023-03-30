@@ -1,0 +1,107 @@
+.btn {
+  position: relative;
+  background-color: transparent;
+
+  span {
+    line-height: 40px;
+  }
+}
+
+.btn + .btn {
+  margin-left: 32px;
+}
+
+//button liền nhau có cái | trước button
+.btn--have-after::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: -16px;
+  background-color: var(--primary-color);
+}
+
+//button dạng link
+.btn--link {
+  span {
+    color: var(--primary-color);
+  }
+}
+
+.btn--link:hover > span,
+.btn--link:active > span {
+  color: var(--active-color);
+}
+
+//button co icon
+.btn--have-icon {
+  .title {
+    margin: 0 8px;
+  }
+}
+
+//btn có 2 icon
+.btn--have-two-icon {
+  .icon + .icon {
+    margin-left: 8px;
+  }
+}
+
+//btn chỉ có 1 icon không có children
+.btn--just-icon {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+
+  .icon {
+    display: block;
+    color: var(--primary-color);
+  }
+
+  span {
+    line-height: 1;
+  }
+}
+
+.btn--just-icon:hover {
+  background-color: var(--primary-color);
+
+  .icon {
+    color: #fff;
+  }
+}
+
+//btn primary
+.btn--primary {
+  width: 100%;
+  background-color: #fff;
+  color: var(--primary-color);
+  border:1px solid var(--primary-color);
+  padding:0 16px;
+}
+
+.btn--primary:hover {
+  border-color: var(--active-color);
+  color: var(--active-color);
+}
+
+//btn có border-radius
+.btn--border-radius {
+  border-radius:3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -ms-border-radius:3px;
+  -o-border-radius:3px;
+}
+
+//btn có box-shadow
+.btn--box-shadow {
+  box-shadow: 0 0 2px 1px var(--shadow-color);
+}
+

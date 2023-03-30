@@ -1,0 +1,39 @@
+.story {
+
+}
+
+.story__header-text {
+    font-size: 3.6rem;
+    color:var(--primary-color);
+}
+
+.story__title {
+
+}
+
+.story__text {
+
+}
+
+.story__text-primary {
+    color:var(--primary-color);
+}
+
+.story__img-box {
+
+    .story__img {
+        width: 50%;
+    }
+}
+
+.drink__header-text {
+    font-family: "Praise", sans-serif;
+    font-size: 6rem;
+    letter-spacing: 3px;
+    font-weight: 100;
+    color: var(--primary-color);
+  }
+  
+  .drink__header-text:hover {
+    color: var(--active-color);
+  }

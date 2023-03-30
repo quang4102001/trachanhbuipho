@@ -1,0 +1,23 @@
+.intro {
+}
+
+.intro__item + .intro__item {
+  margin-top: 16px;
+}
+
+.intro__item__title {
+}
+
+.intro__item__title__text {
+  cursor: pointer;
+}
+
+.intro__item__title__description {
+}
+
+.intro__item__img {
+  img {
+    border: 10px solid var(--primary-color);
+    box-shadow: 0 0 5px var(--shadow-color);
+  }
+}

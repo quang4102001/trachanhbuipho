@@ -1,0 +1,11 @@
+.footer {
+  display: grid;
+  grid-template-columns: 33.333333% 16.666666% 16.666666% 16.666666% 16.666666%;
+  background-color: var(--primary-color);
+}
+
+.footer-box__item {
+  .footer-box__item__icon {
+    color: var(--active-color);
+  }
+}

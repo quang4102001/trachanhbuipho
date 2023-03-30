@@ -1,0 +1,46 @@
+.greeting {
+}
+
+.greeting__item {
+}
+
+.greeting__item__text-box {
+  padding: 16px;
+
+  .greeting__item__text {
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.greeting__item__img-box {
+  padding: 16px;
+  position: relative;
+  border: white;
+
+  .greeting__item__img {
+    width: 100%;
+  }
+}
+
+.greeting__item__img-box::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 16px;
+  bottom: 16px;
+  left: 8px;
+  right: 8px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 30px 20px white;
+  -moz-box-shadow: inset 0px 0px 30px 20px white;
+  -webkit-box-shadow: inset 0px 0px 30px 20px white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

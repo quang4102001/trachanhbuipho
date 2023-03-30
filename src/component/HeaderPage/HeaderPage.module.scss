@@ -1,0 +1,11 @@
+.header-text {
+  font-family: "Praise", sans-serif;
+  font-size: 6rem;
+  letter-spacing: 3px;
+  font-weight: 100;
+  color: var(--primary-color);
+}
+
+.header-text:hover {
+  color: var(--active-color);
+}
