@@ -1,8 +1,8 @@
 <?php
 // Thông tin đăng nhập cơ sở dữ liệu
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "id18115096_root";
+$password = "Quang4102001@";
 $dbname = "id18115096_trachanhbuipho";
 
 // Tạo kết nối đến cơ sở dữ liệu

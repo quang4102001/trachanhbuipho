@@ -1,5 +1,6 @@
 <?php
-header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Origin: *');
+
 header('Content-Type: application/json');
 
 // Gọi tệp kết nối cơ sở dữ liệu

@@ -9,9 +9,9 @@ import { cartContext } from "./../../App";
 
 export const addtoCartFunction = createContext();
 
-function ShowDrink({ api, headerText }) {
+function ShowDrink({ type, headerText }) {
   const [drinkList, setDrinkList] = useState([]);
-  const { setCart } = useContext(cartContext);
+  const { setCart, dataDrink } = useContext(cartContext);
 
   const addToCart = (drink, number) => {
     setCart((preState) =>
@@ -26,8 +26,9 @@ function ShowDrink({ api, headerText }) {
   };
 
   useEffect(() => {
-    axios.get(api).then((res) => setDrinkList(res.data));
-  }, [api]);
+    setDrinkList(dataDrink.filter(item => item.type === type))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dataDrink]);
 
   return (
     <div className={clsx(styles["drink-container"], "py-3")}>

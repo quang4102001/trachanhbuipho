@@ -71,7 +71,7 @@ function FormRegister({
 
   const checkRegister = async () => {
     const saveUserElement = document.getElementById("save-user");
-    const url = `http://localhost/buiphotea/src/api/register.php?nameUser=${nameUser.trim()}&userName=${userName.trim()}&password=${password.trim()}`;
+    const url = `https://trachanhbuipho.000webhostapp.com/api/register.php?nameUser=${nameUser.trim()}&userName=${userName.trim()}&password=${password.trim()}`;
     const user = JSON.stringify({
       username: userName,
       password: password,

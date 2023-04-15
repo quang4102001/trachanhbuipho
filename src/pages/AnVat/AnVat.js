@@ -1,7 +1,7 @@
 import ShowDrink from './../../component/ShowDrink/ShowDrink';
 
 function AnVat() {
-    return ( <><ShowDrink api="http://localhost/buiphotea/src/api/dataDrinkAnvat.php" headerText="Ăn vặt"/></> );
+    return ( <><ShowDrink type="1" headerText="Ăn vặt"/></> );
 }
 
 export default AnVat;

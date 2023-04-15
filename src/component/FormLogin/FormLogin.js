@@ -46,7 +46,7 @@ function FormLogin({
 
   const checkLogin = async () => {
     const saveUserElement = document.getElementById("save-user");
-    const url = `http://localhost/buiphotea/src/api/login.php?username=${userName}&password=${password}`;
+    const url = `https://trachanhbuipho.000webhostapp.com/api/login.php?username=${userName}&password=${password}`;
     let checkLoginSuccess = false;
 
     await axios

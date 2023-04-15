@@ -1,11 +1,12 @@
 <?php
-header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Origin: *');
+
 header('Content-Type: application/json');
 
 // Gọi tệp kết nối cơ sở dữ liệu
 require_once './connectDB.php';
 
-// Xử lý yêu cầu API
+// Xử lý yêu cầu API    
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Lấy danh sách các bản ghi từ cơ sở dữ liệu
     $sql = "SELECT * FROM drink";

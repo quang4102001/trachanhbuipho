@@ -39,7 +39,7 @@
         </div> 
         <script>
              function pay() {
-              window.location.href = "/vnpay_php/vnpay_pay.php";
+              window.location.href = "/vnpay_php/       ";
             }
             function querydr() {
               window.location.href = "/vnpay_php/vnpay_querydr.php";
