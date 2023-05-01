@@ -11,8 +11,9 @@ import {
 import styles from "./Header.module.scss";
 import Button from "../../../component/Button/Button";
 import Layer from "./../../../component/Layer/Layer";
+import { widthNav } from "src/webServices";
 
-function Header() {
+function Header({fullWidth, showNav}) {
   const [openLogin, setOpenLogin] = useState(false);
   const [openRegister, setOpenRegister] = useState(false);
   const [openUser, setOpenUser] = useState(false);
@@ -27,6 +28,7 @@ function Header() {
         styles["header"],
         "d-flex bg-white flex-column align-items-center position-fixed"
       )}
+      style={{left: `${showNav? widthNav : "0"}`}}
     >
       <div
         className={clsx(

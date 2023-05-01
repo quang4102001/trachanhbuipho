@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import MaterialReactTable from "material-react-table";
 import { clsx } from "clsx";
 
@@ -7,9 +7,16 @@ import { cartContext } from "./../../App";
 import styles from "./Cart.module.scss";
 import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Button from "./../../component/Button/Button";
 
 function Cart() {
-  const { cart, setCart } = useContext(cartContext);
+  const { cart, setCart, money, setMoney } = useContext(cartContext);
+
+  useEffect(() => {
+    localStorage.setItem("Cart", JSON.stringify(cart));
+    setMoney(cart.reduce((acc, item) => acc + item.number * item.price, 0));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cart]);
 
   const isNumberSuccess = (number, id) => {
     if (number > 0) {
@@ -30,8 +37,6 @@ function Cart() {
   const deleteItem = (id) => {
     setCart((preCart) => preCart.filter((cart) => cart.id !== id));
   };
-
-  const sumMoney = cart.reduce((acc, item) => acc + item.number * item.price, 0)
 
   const columns = [
     {
@@ -179,8 +184,121 @@ function Cart() {
             toolbar: false,
           }}
         />
-        <p className={clsx(styles["sum-money"], "fw-bold mt-4 me-4 text-end")}>Tổng tiền: {sumMoney}</p>
+        <p className={clsx(styles["sum-money"], "fw-bold mt-4 me-4 text-end")}>
+          Tổng tiền: {money}
+        </p>
       </div>
+      {cart.length > 0 && <div className={clsx(styles[""],"d-flex justify-content-center")}>
+        <form
+          id="login-form"
+          className={clsx(styles["container"], "w-50 mb-5")}
+        >
+          <div className="mb-3">
+            <label htmlFor="user-name" className="form-label">
+              <span style={{ color: "var(--active-color)" }}>*</span>Họ và tên người nhận:
+            </label>
+            <input
+              type="text"
+              className={clsx(styles["form-control"], "form-control")}
+              id="user-name"
+              name="user-name"
+              placeholder="Nhập tên người nhận"
+              required
+            />
+            <span
+              className={clsx(
+                styles["help-text"],
+                "help-text-after-username d-block mt-3"
+              )}
+            ></span>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="phone" className="form-label">
+              <span style={{ color: "var(--active-color)" }}>*</span>Số điện thoại:
+            </label>
+            <input
+              type="text"
+              className={clsx(styles["form-control"], "form-control")}
+              id="phone"
+              name="phone"
+              placeholder="Nhập số điện thoại"
+              required
+            />
+            <span
+              className={clsx(
+                styles["help-text"],
+                "help-text-after-phone d-block mt-3"
+              )}
+            ></span>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="address" className="form-label">
+              <span style={{ color: "var(--active-color)" }}>*</span>Địa chỉ:
+            </label>
+            <input
+              type="text"
+              className={clsx(styles["form-control"], "form-control")}
+              id="address"
+              name="address"
+              placeholder="Nhập địa chỉ"
+              required
+            />
+            <span
+              className={clsx(
+                styles["help-text"],
+                "help-text-after-address d-block mt-3"
+              )}
+            ></span>
+          </div>
+          <div className="mb-3">  
+            <label htmlFor="message" className="form-label">
+              <span style={{ color: "var(--active-color)" }}></span>Ghi chú:
+            </label>
+            <input
+              type="text"
+              className={clsx(styles["form-control"], "form-control")}
+              id="message"
+              name="message"
+              placeholder="Nhập ghi chú"
+            />
+            <span
+              className={clsx(
+                styles["help-text"],
+                "help-text-after-message d-block mt-3"
+              )}
+            ></span>
+          </div>
+          <div className="mb-3 d-none">   
+            <label htmlFor="money" className="form-label">
+              <span style={{ color: "var(--active-color)" }}></span>Tổng tiền:
+            </label>
+            <input
+              type="number"
+              className={clsx(styles["form-control"], "form-control")}
+              id="money"
+              name="money"
+              placeholder="Nhập ghi chú"
+              value={money}
+              onChange={() => {}}
+            />
+            <span
+              className={clsx(
+                styles["help-text"],
+                "help-text-after-money d-block mt-3"
+              )}
+            ></span>
+          </div>
+          <Button primary to="/payment" className={clsx(styles[""], "mt-4")}>
+            Thanh toán
+          </Button> 
+          <span
+            className={clsx(
+              styles["help-text"],
+              "help-text-after-btn d-block mt-3"
+            )}
+          ></span>
+        </form>
+      </div>}
     </>
   );
 }

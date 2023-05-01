@@ -6,6 +6,7 @@ import styles from "./FormRegister.module.scss";
 import Button from "./../Button/Button";
 import HelpAfterForm from "./../HelpAfterForm/HelpAfterForm";
 import HeaderPage from "./../HeaderPage/HeaderPage";
+import { urlDB } from 'src/webServices';
 
 function FormRegister({
   toLogin,
@@ -71,7 +72,7 @@ function FormRegister({
 
   const checkRegister = async () => {
     const saveUserElement = document.getElementById("save-user");
-    const url = `https://trachanhbuipho.000webhostapp.com/api/register.php?nameUser=${nameUser.trim()}&userName=${userName.trim()}&password=${password.trim()}`;
+    const url = `${urlDB}api/register.php?nameUser=${nameUser.trim()}&userName=${userName.trim()}&password=${password.trim()}`;
     const user = JSON.stringify({
       username: userName,
       password: password,

@@ -7,6 +7,7 @@ import styles from "./FormLogin.module.scss";
 import Button from "./../Button/Button";
 import HelpAfterForm from "./../HelpAfterForm/HelpAfterForm";
 import HeaderPage from "./../HeaderPage/HeaderPage";
+import { urlDB } from "src/webServices";
 
 function FormLogin({
   toRegister,
@@ -46,7 +47,7 @@ function FormLogin({
 
   const checkLogin = async () => {
     const saveUserElement = document.getElementById("save-user");
-    const url = `https://trachanhbuipho.000webhostapp.com/api/login.php?username=${userName}&password=${password}`;
+    const url = `${urlDB}api/login.php?username=${userName}&password=${password}`;
     let checkLoginSuccess = false;
 
     await axios

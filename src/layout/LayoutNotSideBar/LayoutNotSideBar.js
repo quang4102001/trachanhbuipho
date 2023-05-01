@@ -9,7 +9,7 @@ const cx = classNames.bind(styles)
 function LayoutNotSideBar({children}) {
   return (
     <div>
-      <Header />
+      <Header fullWidth/>
       <div className={cx("container")}>
         <div className={cx("content")}>{children}</div>
       </div>

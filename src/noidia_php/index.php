@@ -33,7 +33,7 @@ h3.co {
 body {
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 10pt;
-	color: #08185A background-color : #FFFFFF
+	color: #08185A ;background-color : #FFFFFF
 }
 
 a:link {
@@ -119,12 +119,12 @@ th {
 	background: url("./back.png");
 }
 
-* html 
+/* * html 
 .background-image tbody td {
 	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
 		'table-images/back.png', sizingMethod = 'crop' );
 	background: none;
-}
+} */
 
 .background-image tbody tr:hover td {
 	color: #339;
@@ -141,10 +141,11 @@ th {
 }
 -->
 </style>
-</head>
+</head>		
 <body>
 <?php
     date_default_timezone_set('Asia/Krasnoyarsk');
+	var_dump($_POST)
 ?>
 <table width='100%' border='2' cellpadding='2' bgcolor='#0074C4'>
 	<tr>
@@ -170,7 +171,7 @@ th {
 	</tr>
 </table>
 <center>
-<table class="background-image" summary="Meeting Results">
+<table class="background-image" summary="Meeting Results">	
 	<thead>
 		<tr>
 			<th scope="col" width="250px">Name</th>

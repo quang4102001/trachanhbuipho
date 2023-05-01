@@ -1,10 +1,9 @@
 .navigation {
-  width: 300px;
   top: 0;
   left: 0;
   bottom: 0;
   overflow-y: auto;
-  padding: 16px 0;
+  padding: 0 0 16px;
   box-shadow: 0 0 30px rgb(0 0 0 / 5%);
 }
 
@@ -74,4 +73,9 @@
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+}
+
+.text {
+  position: relative;
+  top: 4px;
 }

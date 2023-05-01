@@ -1,6 +1,7 @@
 
 //layout
 import LayoutNotSideBar from './../layout/LayoutNotSideBar/LayoutNotSideBar';
+import LayoutNoThing from './../layout/LayoutNoThing/LayoutNoThing';
 
 //pages
 import Home from "../pages/Home/Home"
@@ -13,16 +14,17 @@ import Drink from "../pages/Drink/Drink"
 import Login from "../pages/Login/Login"
 import Register from "../pages/Register/Register"
 import User from "../pages/User/User"
+import Payment from "../pages/Payment/Payment"
+import { AboutIcon, AnVatIcon, CartIcon, HomeIcon, HotIcon, LoveIcon } from './../component/Icon/Icon';
 
 
 export const publicNavigation = [
-    {path: "/", name: "Trang chủ",component: Home},
-    {path: "/about", name: "Giới thiệu",component: About},
-    {path: "/anvat", name: "Ăn Vặt",component: AnVat},
-    {path: "/buiphohot", name: "Bụi Phố Hot",component: BuiPhoHot},
-    {path: "/buipholove", name: "Bụi Phố Love",component: BuiPhoLove},
-    {path: "/cart", name: "Giỏ hàng",component: Cart, cart:true},
-
+    {path: "/", icon: HomeIcon,name: "Trang chủ",component: Home},
+    {path: "/about", icon: AboutIcon,name: "Giới thiệu",component: About},
+    {path: "/anvat", icon: AnVatIcon,name: "Ăn Vặt",component: AnVat},
+    {path: "/buiphohot", icon: HotIcon,name: "Bụi Phố Hot",component: BuiPhoHot},
+    {path: "/buipholove", icon: LoveIcon,name: "Bụi Phố Love",component: BuiPhoLove},
+    {path: "/cart", icon: CartIcon,name: "Giỏ hàng",component: Cart, cart:true},
 ]
 
 export const publicRoutes = [
@@ -33,9 +35,7 @@ export const publicRoutes = [
     {path: "/buipholove", name: "Bui Phố Love",component: BuiPhoLove},
     {path: "/cart", name: "Giỏ hàng",component: Cart},
     {path: "/login", name: "Đăng nhập",component: Login},
-    {path: "/register", name: "Đăng kí",component: Register},
-    {path: "/user", name: "Người dùng",component: User},
-
+    {path: "/payment", name: "Thanh toán",component: Payment, layout: LayoutNoThing},
 ]
 
 export const privateRoutes = [

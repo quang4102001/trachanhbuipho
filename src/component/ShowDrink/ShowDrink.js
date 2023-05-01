@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState, createContext } from "react";
-import axios from "axios";
 import clsx from "clsx";
 
 import styles from "./ShowDrink.module.scss";

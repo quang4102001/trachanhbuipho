@@ -23,7 +23,7 @@ $SECURE_SECRET = "A3EFDFABA8653DF2342E8DAC29B51AF0";
 
 // add the start of the vpcURL querystring parameters
 // *****************************Lấy giá trị url cổng thanh toán*****************************
-$vpcURL = $_POST["virtualPaymentClientURL"] . "?";
+$vpcURL = $_POST["virtualPaymentClientURL"] . "?";  
 
 // Remove the Virtual Payment Client URL from the parameter hash as we 
 // do not want to send these fields to the Virtual Payment Client.

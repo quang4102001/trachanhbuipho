@@ -1,0 +1,92 @@
+.container {
+}
+
+.header {
+  height: 100px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  height: 80px;
+}
+
+.img {
+  display: block;
+  padding: 0 8px;
+  img {
+    position: relative;
+    width: 32px;
+  }
+}
+
+.img:nth-child(2) {
+  border-left: 1px solid black;
+}
+
+.main {
+  min-height: calc(100vh - 172px);
+  display: grid;
+  grid-template-columns: 58.333333% 8.333333% 33.333333%;
+
+  & > div {
+    padding: 16px 0;
+  }
+}
+
+.header-box {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background-color: #f1eff1;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.form-group {
+  padding: 16px;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4);
+
+  & > div + div {
+    margin-top: 8px;
+  }
+
+  input {
+    padding: 4px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+
+  input:focus {
+    border-color: rgba(0,0,0,0.6)
+  }
+
+  &>div>div:nth-child(1){
+    margin-right: 16px; 
+  }
+}
+
+.link-close:hover,
+.link-close:active {
+  text-decoration: underline;
+}
+
+.text-money {
+  font-size: 2.6rem;
+}
+
+.img-footer {
+  height: 26px;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  height: 46px;
+  background-color: #f0f0f0;
+}

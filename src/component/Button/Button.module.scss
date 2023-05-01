@@ -1,7 +1,8 @@
 .btn {
   position: relative;
+  display: inline-block;
   background-color: transparent;
-
+  
   span {
     line-height: 40px;
   }
@@ -18,9 +19,14 @@
   width: 1px;
   height: 20px;
   position: absolute;
-  top: 0px;
+  top: 50%;
   left: -16px;
   background-color: var(--primary-color);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 //button dạng link
@@ -84,6 +90,8 @@
   color: var(--primary-color);
   border:1px solid var(--primary-color);
   padding:0 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .btn--primary:hover {
@@ -103,5 +111,15 @@
 //btn có box-shadow
 .btn--box-shadow {
   box-shadow: 0 0 2px 1px var(--shadow-color);
+}
+
+//btn blue
+.btn--blue {
+  background-color: #6b98ba;
+  padding:0 8px;
+}
+
+.btn--blue:hover {
+  background-color: #6b98bad6;
 }
 

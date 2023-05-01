@@ -18,6 +18,7 @@ function Button({
   borderRadius,
   boxShadow,
   likeLink,
+  blue,
   ...passProps
 }) {
   const _props = {
@@ -57,6 +58,9 @@ function Button({
   }
   if (boxShadow) {
     classCustom.push(styles["btn--box-shadow"]);
+  }
+  if (blue) {
+    classCustom.push(styles["btn--blue"]);
   }
 
   const classDefault = clsx(
