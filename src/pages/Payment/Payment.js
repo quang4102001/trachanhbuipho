@@ -20,13 +20,13 @@ function Payment() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputOTP) {
-      if(OTPCard === "123456") {
+      if(OTPCard.trim() === "123456") {
         window.location.replace(urlMain);
       }else{
         alert("Sai!")
       }
     } else {
-      if(numberCard === "9704250000000001" & dateCard === "01/13" & nameCard === "NGUYEN VAN A") {
+      if(numberCard.trim() === "9704250000000001" & dateCard.trim() === "01/13" & nameCard.trim() === "NGUYEN VAN A") {
         setInputOTP(true)
       }else{
         alert("Sai!")

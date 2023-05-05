@@ -4,6 +4,7 @@ import { createContext, Fragment, useEffect, useState } from "react";
 import {  publicRoutes } from "./routes/routes";
 import { LayoutSideBar } from "./layout/layout";
 import axios from "axios";
+import { urlDB } from "./webServices";
 
 export const cartContext = createContext();
 
@@ -14,7 +15,7 @@ function App() {
 
   const getDataDrink = () => {
     axios
-      .get("http://localhost/buiphoteacopy/src/api/dataDrink.php")
+      .get(`${urlDB}api/dataDrink.php`)
       .then((res) => setDataDrink(res.data));
   };
 
